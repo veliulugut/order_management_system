@@ -1,0 +1,9 @@
+version: "2"
+sql:
+  - engine: "sqlite"
+    schema: "./pkg/database/schema.sql"     # Şema dosyasının yolu
+    queries: "./pkg/database/query.sql"     # SQL sorgularının tanımlı olduğu dosya
+    gen:
+      go:
+        out: "./pkg/database"               # Oluşturulan Go kodlarının kaydedileceği klasör
+        package: "database"                 # Go paketi adı
